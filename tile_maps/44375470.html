@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_780a2c8aff27317ba7d15ac34b683714 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_780a2c8aff27317ba7d15ac34b683714" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_780a2c8aff27317ba7d15ac34b683714 = L.map(
+                "map_780a2c8aff27317ba7d15ac34b683714",
+                {
+                    center: [47.45359887246951, 8.58567571614526],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_780a2c8aff27317ba7d15ac34b683714);
+
+            
+
+        
+    
+            var tile_layer_f5615099bba5f25f836c958fd2c41b56 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_f5615099bba5f25f836c958fd2c41b56.addTo(map_780a2c8aff27317ba7d15ac34b683714);
+        
+    
+            map_780a2c8aff27317ba7d15ac34b683714.fitBounds(
+                [[47.44903660326523, 8.578949391225557], [47.458161141673806, 8.592402041064966]],
+                {}
+            );
+        
+    
+        function geo_json_c58a142b1a373a69f3a6c432576dc1a0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.5, "weight": 2};
+            }
+        }
+        function geo_json_c58a142b1a373a69f3a6c432576dc1a0_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_c58a142b1a373a69f3a6c432576dc1a0_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3};
+            
+            let style = geo_json_c58a142b1a373a69f3a6c432576dc1a0_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_c58a142b1a373a69f3a6c432576dc1a0_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                            geo_json_c58a142b1a373a69f3a6c432576dc1a0.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_c58a142b1a373a69f3a6c432576dc1a0_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_c58a142b1a373a69f3a6c432576dc1a0 = L.geoJson(null, {
+                onEachFeature: geo_json_c58a142b1a373a69f3a6c432576dc1a0_onEachFeature,
+            
+                style: geo_json_c58a142b1a373a69f3a6c432576dc1a0_styler,
+                pointToLayer: geo_json_c58a142b1a373a69f3a6c432576dc1a0_pointToLayer,
+        });
+
+        function geo_json_c58a142b1a373a69f3a6c432576dc1a0_add (data) {
+            geo_json_c58a142b1a373a69f3a6c432576dc1a0
+                .addData(data);
+        }
+            geo_json_c58a142b1a373a69f3a6c432576dc1a0_add({"bbox": [8.578949391225557, 47.44903660326523, 8.592402041064966, 47.458161141673806], "features": [{"bbox": [8.578949391225557, 47.44903660326523, 8.592402041064966, 47.458161141673806], "geometry": {"coordinates": [[[8.578949391225557, 47.44916806217056], [8.592207089243194, 47.44903660326523], [8.592402041064966, 47.45802966076229], [8.579142101436762, 47.458161141673806], [8.578949391225557, 47.44916806217056]]], "type": "Polygon"}, "id": "79", "properties": {"Andere Trips": 7204.04, "Angestellte": 2628, "Anzahl Arbeitgeber": 79, "Bestehendes \u00d6V-Potenzial (Verhaltens\u00e4nderung)": 4120.14, "Gr\u00f6sster Arbeitgeber": "Company Cluster (UBS Branch), Schaffhauserstrasse 128, Kloten", "Gr\u00fcne \u00d6V-Qualit\u00e4t Status Quo": 27.96, "Gr\u00fcne \u00d6V-Qualit\u00e4t mit Velo \u0026 Letzte Meile": 48.62, "LV Modal Split": 0.26, "Letzte Meile Potenzial": 0.0, "Link zur Karte": "https://un-real-ai.github.io/data_ZH/tiles_map/44375470.html", "MIV Modal Split": 0.5, "Ort": "Kloten", "PLZ": 8302, "Pendlertrips": 1876.39, "Total PKM": 106238.86, "Total Potenzial": 5671.34, "Trips": 9080.43, "Velo Potenzial": 1551.19, "tileID": 44375470, "\u00d6V Modal Split": 0.24}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_c58a142b1a373a69f3a6c432576dc1a0.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Link zur Karte", "PLZ", "Ort", "Total PKM", "Trips", "Pendlertrips", "Andere Trips", "Angestellte", "Anzahl Arbeitgeber", "Gr\u00f6sster Arbeitgeber", "Gr\u00fcne \u00d6V-Qualit\u00e4t Status Quo", "Gr\u00fcne \u00d6V-Qualit\u00e4t mit Velo \u0026 Letzte Meile", "\u00d6V Modal Split", "LV Modal Split", "MIV Modal Split", "Total Potenzial", "Bestehendes \u00d6V-Potenzial (Verhaltens\u00e4nderung)", "Letzte Meile Potenzial", "Velo Potenzial", "tileID"];
+    let aliases = ["Link zur Karte", "PLZ", "Ort", "Total PKM", "Trips", "Pendlertrips", "Andere Trips", "Angestellte", "Anzahl Arbeitgeber", "Gr\u00f6sster Arbeitgeber", "Gr\u00fcne \u00d6V-Qualit\u00e4t Status Quo", "Gr\u00fcne \u00d6V-Qualit\u00e4t mit Velo \u0026 Letzte Meile", "\u00d6V Modal Split", "LV Modal Split", "MIV Modal Split", "Total Potenzial", "Bestehendes \u00d6V-Potenzial (Verhaltens\u00e4nderung)", "Letzte Meile Potenzial", "Velo Potenzial", "tileID"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+    
+            geo_json_c58a142b1a373a69f3a6c432576dc1a0.addTo(map_780a2c8aff27317ba7d15ac34b683714);
+        
+</script>
+</html>
