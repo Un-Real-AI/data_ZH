@@ -1,21 +1,21 @@
-Fahrten,Namen
-19622,Zürich
-10470,Winterthur
-8840,St. Gallen
-5485,Frauenfeld
-4424,Kloten
-3664,Kirchberg (SG)
-2650,Kreuzlingen
-2085,Weinfelden
-1733,Gossau (SG)
-1390,Dübendorf
-1385,St. Margrethen
-1332,Romanshorn
-1293,Schaffhausen
-1242,Seuzach
-1198,Basel
-1159,Uzwil
-1094,Aadorf
-1058,Bern
-1017,Amriswil
-1007,Opfikon
+Namen,Fahrten,Anteil (%)
+Winterthur,8786,44.3
+Zürich,772,3.9
+St. Gallen,754,3.8
+Frauenfeld,675,3.4
+Hettlingen,654,3.3
+Schaffhausen,603,3.0
+Seuzach,584,2.9
+Kirchberg (SG),504,2.5
+Bülach,317,1.6
+Weinfelden,295,1.5
+Andelfingen,250,1.3
+Laufen-Uhwiesen,228,1.2
+Neftenbach,198,1.0
+Embrach,160,0.8
+Gossau (SG),151,0.8
+Pfungen,141,0.7
+Eschlikon,136,0.7
+Uzwil,135,0.7
+Kreuzlingen,132,0.7
+Aadorf,129,0.7

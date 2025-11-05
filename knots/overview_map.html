@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_871acf5d107b12ecd4caf9afb0bc094a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_871acf5d107b12ecd4caf9afb0bc094a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_871acf5d107b12ecd4caf9afb0bc094a = L.map(
+                "map_871acf5d107b12ecd4caf9afb0bc094a",
+                {
+                    center: [47.390411403939524, 8.623437063335434],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_00ea8544e993a2bd5872f147f83ee682 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_00ea8544e993a2bd5872f147f83ee682.addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+        function geo_json_d8d38ecc184931b8eac1780429392f6b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#2563eb", "fillColor": "#60a5fa", "fillOpacity": 0.15, "weight": 2};
+            }
+        }
+
+        function geo_json_d8d38ecc184931b8eac1780429392f6b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d8d38ecc184931b8eac1780429392f6b = L.geoJson(null, {
+                onEachFeature: geo_json_d8d38ecc184931b8eac1780429392f6b_onEachFeature,
+            
+                style: geo_json_d8d38ecc184931b8eac1780429392f6b_styler,
+            ...{
+}
+        });
+
+        function geo_json_d8d38ecc184931b8eac1780429392f6b_add (data) {
+            geo_json_d8d38ecc184931b8eac1780429392f6b
+                .addData(data);
+        }
+            geo_json_d8d38ecc184931b8eac1780429392f6b_add({"features": [{"geometry": {"coordinates": [[[8.398411603271086, 47.41488271451749], [8.397978234250516, 47.414609377801476], [8.393657818436758, 47.41775749000438], [8.391509341667955, 47.4191834151239], [8.389355145257383, 47.417423067265645], [8.386507241191524, 47.414869056921546], [8.386016011496878, 47.415461362986235], [8.39119717579154, 47.42000155869137], [8.39202266840185, 47.42113998027102], [8.392698452062582, 47.42102031927247], [8.392193067523436, 47.41951045947701], [8.392461395575197, 47.41915898998121], [8.393391514078672, 47.41961590978784], [8.393799237058431, 47.41934865508665], [8.392983791098885, 47.418779656688], [8.398411603271086, 47.41488271451749]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_d8d38ecc184931b8eac1780429392f6b.addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+            var circle_marker_c0175cb84b7ed6ea7d6c9dd696fdda9d = L.circleMarker(
+                [47.41959522807624, 8.391447685045192],
+                {"bubblingMouseEvents": true, "color": "#1d4ed8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1d4ed8", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+        var popup_a23e9a13354526bf0d0cbf64e6f533ae = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_cc6d0a45572db30a33a08bfc5279ac58 = $(`<div id="html_cc6d0a45572db30a33a08bfc5279ac58" style="width: 100.0%; height: 100.0%;">Dietikon - Mutschellenstrasse - Tunnel<br>MIV-Fahrten: 39,696</div>`)[0];
+                popup_a23e9a13354526bf0d0cbf64e6f533ae.setContent(html_cc6d0a45572db30a33a08bfc5279ac58);
+            
+        
+
+        circle_marker_c0175cb84b7ed6ea7d6c9dd696fdda9d.bindPopup(popup_a23e9a13354526bf0d0cbf64e6f533ae)
+        ;
+
+        
+    
+    
+            circle_marker_c0175cb84b7ed6ea7d6c9dd696fdda9d.bindTooltip(
+                `<div>
+                     Dietikon - Mutschellenstrasse - Tunnel<br>MIV-Fahrten: 39,696
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        function geo_json_885464a0070bb52c4aec1c6921cf1bdc_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#2563eb", "fillColor": "#60a5fa", "fillOpacity": 0.15, "weight": 2};
+            }
+        }
+
+        function geo_json_885464a0070bb52c4aec1c6921cf1bdc_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_885464a0070bb52c4aec1c6921cf1bdc = L.geoJson(null, {
+                onEachFeature: geo_json_885464a0070bb52c4aec1c6921cf1bdc_onEachFeature,
+            
+                style: geo_json_885464a0070bb52c4aec1c6921cf1bdc_styler,
+            ...{
+}
+        });
+
+        function geo_json_885464a0070bb52c4aec1c6921cf1bdc_add (data) {
+            geo_json_885464a0070bb52c4aec1c6921cf1bdc
+                .addData(data);
+        }
+            geo_json_885464a0070bb52c4aec1c6921cf1bdc_add({"features": [{"geometry": {"coordinates": [[[8.719459084654261, 47.51692375586842], [8.720135425829653, 47.51697334746831], [8.718796801404551, 47.51969248379345], [8.716857991429578, 47.522605237454556], [8.72057577331418, 47.52340653447047], [8.720280107077485, 47.523776970240135], [8.717967949146683, 47.52395994313646], [8.716649206790834, 47.524670785405846], [8.715640171102791, 47.52472319878257], [8.71429282666665, 47.52615799817485], [8.713434541600947, 47.52708528602281], [8.71321053620926, 47.52731509113522], [8.713047729714901, 47.5274059554541], [8.712679806402122, 47.527198029320374], [8.712878000267324, 47.52700312637856], [8.7130295389033, 47.5268035342352], [8.713682469819531, 47.52584826715062], [8.714675468922678, 47.52458985991916], [8.71500193438024, 47.52354269512318], [8.715454564245476, 47.522991725496304], [8.71350176135094, 47.52336283741515], [8.712499385014212, 47.523746981004805], [8.712339233722616, 47.52354809935608], [8.714648263467467, 47.5216320247888], [8.716620658944464, 47.52106248459148], [8.71816913941646, 47.51862228382933], [8.718340480554815, 47.518379011685994], [8.718929321338436, 47.517715199106334], [8.719459084654261, 47.51692375586842]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_885464a0070bb52c4aec1c6921cf1bdc.addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+            var circle_marker_3c9792c9da31dd33db9f376d38684c9b = L.circleMarker(
+                [47.52307777347909, 8.715927422534557],
+                {"bubblingMouseEvents": true, "color": "#1d4ed8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1d4ed8", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+        var popup_c3c07a7d747be8ca47270f6abc76da10 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d629e75ca8cf12fc7abf505c39bf4c08 = $(`<div id="html_d629e75ca8cf12fc7abf505c39bf4c08" style="width: 100.0%; height: 100.0%;">Winterthur - Ohringen - Anschlussknoten<br>MIV-Fahrten: 32,211</div>`)[0];
+                popup_c3c07a7d747be8ca47270f6abc76da10.setContent(html_d629e75ca8cf12fc7abf505c39bf4c08);
+            
+        
+
+        circle_marker_3c9792c9da31dd33db9f376d38684c9b.bindPopup(popup_c3c07a7d747be8ca47270f6abc76da10)
+        ;
+
+        
+    
+    
+            circle_marker_3c9792c9da31dd33db9f376d38684c9b.bindTooltip(
+                `<div>
+                     Winterthur - Ohringen - Anschlussknoten<br>MIV-Fahrten: 32,211
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        function geo_json_b7c304d41c548124c63eaa54a8c0c44d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#2563eb", "fillColor": "#60a5fa", "fillOpacity": 0.15, "weight": 2};
+            }
+        }
+
+        function geo_json_b7c304d41c548124c63eaa54a8c0c44d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b7c304d41c548124c63eaa54a8c0c44d = L.geoJson(null, {
+                onEachFeature: geo_json_b7c304d41c548124c63eaa54a8c0c44d_onEachFeature,
+            
+                style: geo_json_b7c304d41c548124c63eaa54a8c0c44d_styler,
+            ...{
+}
+        });
+
+        function geo_json_b7c304d41c548124c63eaa54a8c0c44d_add (data) {
+            geo_json_b7c304d41c548124c63eaa54a8c0c44d
+                .addData(data);
+        }
+            geo_json_b7c304d41c548124c63eaa54a8c0c44d_add({"features": [{"geometry": {"coordinates": [[[8.832685806941015, 47.29911843291177], [8.831084962376302, 47.29814167119912], [8.829030014860095, 47.29757552899133], [8.829234097859711, 47.29718750097783], [8.831197390216488, 47.297683739863025], [8.832706579621771, 47.29846228222634], [8.83436973853685, 47.30030719754498], [8.834467438206005, 47.300442916753894], [8.835213637359196, 47.30027895374941], [8.83536041233964, 47.30022447361091], [8.835625763168736, 47.30047868256503], [8.83511854162191, 47.30068270059681], [8.834489197787462, 47.300761767873155], [8.834529484970517, 47.30144870583106], [8.834446071349348, 47.302554703270616], [8.83465103015601, 47.303514033242806], [8.838816757297394, 47.303189487253064], [8.84010565026989, 47.30343358306382], [8.839606349388134, 47.30377216571014], [8.83433466101377, 47.30407137647558], [8.83238996992759, 47.30760780198514], [8.830526389299195, 47.30872128014727], [8.82965917851294, 47.30849608420908], [8.831707272073714, 47.306431743399855], [8.83248222639375, 47.30452997627921], [8.827850951765328, 47.30535575198613], [8.820466298703025, 47.306902783797824], [8.8202705705217, 47.30653924308368], [8.825018253145018, 47.30554142831622], [8.828072456645337, 47.3048105298476], [8.830075578895077, 47.304269112619295], [8.83198404147393, 47.30354153082047], [8.833109570367725, 47.30229030753293], [8.833663109167418, 47.3016021221016], [8.8333309858873, 47.300263262960016], [8.832685806941015, 47.29911843291177]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_b7c304d41c548124c63eaa54a8c0c44d.addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+            var circle_marker_8af944f62d4b25408432ff97b45d9523 = L.circleMarker(
+                [47.303563040676245, 8.833237200816185],
+                {"bubblingMouseEvents": true, "color": "#1d4ed8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1d4ed8", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+        var popup_69fd7fe00961892fdf7439b35542727f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ef4432fea6491b379aa805d6a8b77995 = $(`<div id="html_ef4432fea6491b379aa805d6a8b77995" style="width: 100.0%; height: 100.0%;">Hinwil - Winterthurerstrasse - Zürichstrasse<br>MIV-Fahrten: 24,728</div>`)[0];
+                popup_69fd7fe00961892fdf7439b35542727f.setContent(html_ef4432fea6491b379aa805d6a8b77995);
+            
+        
+
+        circle_marker_8af944f62d4b25408432ff97b45d9523.bindPopup(popup_69fd7fe00961892fdf7439b35542727f)
+        ;
+
+        
+    
+    
+            circle_marker_8af944f62d4b25408432ff97b45d9523.bindTooltip(
+                `<div>
+                     Hinwil - Winterthurerstrasse - Zürichstrasse<br>MIV-Fahrten: 24,728
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        function geo_json_88b1b2f932980093ec3b50541777e896_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#2563eb", "fillColor": "#60a5fa", "fillOpacity": 0.15, "weight": 2};
+            }
+        }
+
+        function geo_json_88b1b2f932980093ec3b50541777e896_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_88b1b2f932980093ec3b50541777e896 = L.geoJson(null, {
+                onEachFeature: geo_json_88b1b2f932980093ec3b50541777e896_onEachFeature,
+            
+                style: geo_json_88b1b2f932980093ec3b50541777e896_styler,
+            ...{
+}
+        });
+
+        function geo_json_88b1b2f932980093ec3b50541777e896_add (data) {
+            geo_json_88b1b2f932980093ec3b50541777e896
+                .addData(data);
+        }
+            geo_json_88b1b2f932980093ec3b50541777e896_add({"features": [{"geometry": {"coordinates": [[[8.633533901128487, 47.374872247905785], [8.62856573623912, 47.377491107497725], [8.62661454753097, 47.378778666854345], [8.625438476982868, 47.380044356609986], [8.6239959595665, 47.38234330626363], [8.621972103530124, 47.38462038779218], [8.621541609542625, 47.38628804402803], [8.620614750265943, 47.3863467671742], [8.621056873473982, 47.38463323315553], [8.62379607032217, 47.38155197668898], [8.625083242117217, 47.37914877721295], [8.628971563240691, 47.37661827696466], [8.631657254506262, 47.37542137662741], [8.6337661048982, 47.373833843557435], [8.634818172502397, 47.37283960647314], [8.635902199465516, 47.372126736935584], [8.638224826322444, 47.37073329272907], [8.63814284232975, 47.37056123766627], [8.632770450987593, 47.37277594064703], [8.632245264418799, 47.372089751767135], [8.632621038645851, 47.370874561118825], [8.632959578144181, 47.36923268085212], [8.633412443697239, 47.36919067122767], [8.633520395531548, 47.370459822942024], [8.633155481783646, 47.37183442738278], [8.635320663444993, 47.37111263568854], [8.637616015415393, 47.37020920267604], [8.638045731040117, 47.37012480144045], [8.637740820974745, 47.36986070100593], [8.638003197596788, 47.369705638121815], [8.638477209132816, 47.370131245853514], [8.63889621457092, 47.369440316399164], [8.639116616983294, 47.369407558242486], [8.638778381503442, 47.370150037689626], [8.638944891411256, 47.37047349428096], [8.63996450166087, 47.370391788441964], [8.641872503231468, 47.36995567586439], [8.642864875936795, 47.36954812422326], [8.644083857913408, 47.36874374171637], [8.645936682790492, 47.36804668108235], [8.647314125491512, 47.36611537482915], [8.647978494930499, 47.36628766159495], [8.647357010699984, 47.3672446777361], [8.646449753651169, 47.368171568902554], [8.644438305523344, 47.36908992281217], [8.64328363233713, 47.36992656572693], [8.641381197441277, 47.370496347277964], [8.63937861486744, 47.37079482648221], [8.640532454042273, 47.37180844888155], [8.645145745325365, 47.376239228912496], [8.646137877575004, 47.37782839035478], [8.646705492151666, 47.37861604735794], [8.64737531880035, 47.37910608822903], [8.648298820825797, 47.379502043920354], [8.649442436299848, 47.37957133588519], [8.651076449832402, 47.37953111621212], [8.651131318818955, 47.380087595872965], [8.647437400813999, 47.379703254087374], [8.646226613109562, 47.378776760270455], [8.64406280307358, 47.37644569832303], [8.639707152933966, 47.37189740118103], [8.638673095545357, 47.37107203106493], [8.637026991457844, 47.372077027402526], [8.633533901128487, 47.374872247905785]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_88b1b2f932980093ec3b50541777e896.addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+            var circle_marker_7dcf04abb98f38b3b06b2b44c50633b0 = L.circleMarker(
+                [47.37067831663422, 8.638887196037832],
+                {"bubblingMouseEvents": true, "color": "#1d4ed8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1d4ed8", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+        var popup_779f272fe3d5fd8553e77785ea612c8c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7494a1760e121f621a92badaf96ba457 = $(`<div id="html_7494a1760e121f621a92badaf96ba457" style="width: 100.0%; height: 100.0%;">Fällanden - Kreisel<br>MIV-Fahrten: 23,018</div>`)[0];
+                popup_779f272fe3d5fd8553e77785ea612c8c.setContent(html_7494a1760e121f621a92badaf96ba457);
+            
+        
+
+        circle_marker_7dcf04abb98f38b3b06b2b44c50633b0.bindPopup(popup_779f272fe3d5fd8553e77785ea612c8c)
+        ;
+
+        
+    
+    
+            circle_marker_7dcf04abb98f38b3b06b2b44c50633b0.bindTooltip(
+                `<div>
+                     Fällanden - Kreisel<br>MIV-Fahrten: 23,018
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        function geo_json_40ae0b5679146102fc21868e8a5a1e89_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#2563eb", "fillColor": "#60a5fa", "fillOpacity": 0.15, "weight": 2};
+            }
+        }
+
+        function geo_json_40ae0b5679146102fc21868e8a5a1e89_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_40ae0b5679146102fc21868e8a5a1e89 = L.geoJson(null, {
+                onEachFeature: geo_json_40ae0b5679146102fc21868e8a5a1e89_onEachFeature,
+            
+                style: geo_json_40ae0b5679146102fc21868e8a5a1e89_styler,
+            ...{
+}
+        });
+
+        function geo_json_40ae0b5679146102fc21868e8a5a1e89_add (data) {
+            geo_json_40ae0b5679146102fc21868e8a5a1e89
+                .addData(data);
+        }
+            geo_json_40ae0b5679146102fc21868e8a5a1e89_add({"features": [{"geometry": {"coordinates": [[[8.581384971013222, 47.46095411084764], [8.58152634463012, 47.46025943764522], [8.581281401467173, 47.45945161278928], [8.580502751785811, 47.458188471254715], [8.580150804177903, 47.45791351362401], [8.579782244465207, 47.45717804345014], [8.579353767788547, 47.456322573238026], [8.579254095164401, 47.45577237946313], [8.579562936961082, 47.45431633597089], [8.579559542873042, 47.45393652615346], [8.579007949360062, 47.45378137258865], [8.577543332477177, 47.45360226614932], [8.575081529631717, 47.45349690913565], [8.574208991914588, 47.45341262337254], [8.573458654435683, 47.453037732222924], [8.573907585875105, 47.45280944134052], [8.574372163136672, 47.453082429898785], [8.575365668642377, 47.453147212261], [8.577813382077068, 47.4532033884642], [8.578041925457796, 47.452611901886314], [8.57829050058345, 47.45203948953906], [8.578403323933543, 47.45177252489853], [8.578510574128757, 47.451409176211], [8.578600673014137, 47.45128131134908], [8.578896471206633, 47.45132535254939], [8.578852139052856, 47.451927064626744], [8.578550457135918, 47.453098579509145], [8.579706111008363, 47.45318432071829], [8.580456985211356, 47.45149508576881], [8.58178350836966, 47.44951532975923], [8.581394348477271, 47.44834472988566], [8.581071973453374, 47.44786256734697], [8.580422068377331, 47.447516159793295], [8.579513416887067, 47.44663424734267], [8.580155639838694, 47.446877655095136], [8.581975771867548, 47.447831234946534], [8.58215214266069, 47.44834134917441], [8.58223346587755, 47.44854761037297], [8.582508742973559, 47.44961974519025], [8.581301111288468, 47.451535370441235], [8.58327824719396, 47.45109464893852], [8.583682258560003, 47.45279101169868], [8.584866416891515, 47.45254868651304], [8.585351063046915, 47.45206837990963], [8.585760419583636, 47.45197315090202], [8.585899037554384, 47.45234547073943], [8.593050333363479, 47.450794992811225], [8.593177510746585, 47.45111221673619], [8.586637530475144, 47.45255430284678], [8.58485083586001, 47.45303333576726], [8.584398985971262, 47.4533494089618], [8.585159475811423, 47.45400045265424], [8.586175223467222, 47.45445565018184], [8.585614306363198, 47.454697966580284], [8.585053389259087, 47.45459261176137], [8.583729001651932, 47.453244051441516], [8.582217641677147, 47.4535495876691], [8.580566052426661, 47.45408690569437], [8.58031675593574, 47.45498242353585], [8.579880487077162, 47.456088630402945], [8.582245994524186, 47.46024017995691], [8.581923461442287, 47.46098461173281], [8.581384971013222, 47.46095411084764]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_40ae0b5679146102fc21868e8a5a1e89.addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+            var circle_marker_1af1335d1a48dca508df6004041fcc96 = L.circleMarker(
+                [47.45350941478694, 8.580347835810922],
+                {"bubblingMouseEvents": true, "color": "#1d4ed8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1d4ed8", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+        var popup_e1d8bb5a603218ef63dbb601adb91bbb = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_461195b1a1801af1e0881533342202b4 = $(`<div id="html_461195b1a1801af1e0881533342202b4" style="width: 100.0%; height: 100.0%;">Kloten - Zum Wilden Mann<br>MIV-Fahrten: 22,940</div>`)[0];
+                popup_e1d8bb5a603218ef63dbb601adb91bbb.setContent(html_461195b1a1801af1e0881533342202b4);
+            
+        
+
+        circle_marker_1af1335d1a48dca508df6004041fcc96.bindPopup(popup_e1d8bb5a603218ef63dbb601adb91bbb)
+        ;
+
+        
+    
+    
+            circle_marker_1af1335d1a48dca508df6004041fcc96.bindTooltip(
+                `<div>
+                     Kloten - Zum Wilden Mann<br>MIV-Fahrten: 22,940
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        function geo_json_ccee03a134971a9d8b66b421bb72198d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#2563eb", "fillColor": "#60a5fa", "fillOpacity": 0.15, "weight": 2};
+            }
+        }
+
+        function geo_json_ccee03a134971a9d8b66b421bb72198d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ccee03a134971a9d8b66b421bb72198d = L.geoJson(null, {
+                onEachFeature: geo_json_ccee03a134971a9d8b66b421bb72198d_onEachFeature,
+            
+                style: geo_json_ccee03a134971a9d8b66b421bb72198d_styler,
+            ...{
+}
+        });
+
+        function geo_json_ccee03a134971a9d8b66b421bb72198d_add (data) {
+            geo_json_ccee03a134971a9d8b66b421bb72198d
+                .addData(data);
+        }
+            geo_json_ccee03a134971a9d8b66b421bb72198d_add({"features": [{"geometry": {"coordinates": [[[8.80789183265395, 47.34106629911071], [8.809865074185296, 47.33885264032894], [8.811665597066309, 47.33527345100899], [8.811719933464843, 47.33429391917301], [8.811578658827386, 47.33353532188349], [8.810991825714893, 47.33338802017562], [8.810872285636435, 47.33286509579361], [8.810470196282267, 47.33266623586678], [8.809905097729768, 47.3327693485148], [8.807981589195748, 47.33284300028325], [8.807981589195748, 47.33260731426313], [8.809942407435756, 47.33243348126885], [8.809068317180902, 47.33204019046789], [8.806222402556386, 47.33086060957217], [8.806559899838362, 47.33067899441414], [8.808372811270402, 47.33134784926693], [8.810796214677993, 47.332342166233616], [8.8115134551484, 47.33204019046789], [8.812111155539498, 47.33124473384348], [8.813089210726673, 47.32990421501685], [8.813556503760822, 47.329977870780425], [8.813806451197138, 47.33023566514561], [8.814360682469157, 47.330397706673836], [8.813284821764569, 47.33235689671477], [8.815175728458058, 47.33248210563738], [8.816095753210334, 47.33237656252578], [8.816604978038328, 47.33215598866363], [8.816681425646976, 47.33212449877564], [8.816737109638098, 47.33210143436341], [8.816970311140295, 47.33230433598371], [8.816930763093637, 47.33233789096445], [8.816753177675253, 47.33241530590996], [8.816526394353758, 47.33255202126435], [8.816418439446522, 47.33258719747323], [8.816686587461646, 47.33301318551426], [8.816394904026794, 47.33306750712478], [8.816288817923478, 47.332847725725145], [8.816099447245847, 47.33272515740464], [8.815219197578017, 47.33284300028325], [8.814186805992307, 47.33299030351134], [8.813002272487779, 47.33305658982985], [8.812377023964046, 47.333344986569784], [8.812285032017314, 47.3340140495967], [8.812741457770983, 47.335030410970035], [8.813556503760822, 47.335199802630854], [8.813817318765814, 47.33561959718759], [8.81341522941159, 47.335928917227875], [8.812219828627605, 47.33539128837657], [8.810464504907259, 47.33882841555068], [8.808435709993631, 47.34108533435128], [8.80789183265395, 47.34106629911071]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_ccee03a134971a9d8b66b421bb72198d.addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+            var circle_marker_1bad178d4dc3a99b9691b5d127da0b1c = L.circleMarker(
+                [47.332821003661316, 8.81189344248694],
+                {"bubblingMouseEvents": true, "color": "#1d4ed8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1d4ed8", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+        var popup_38c93683449193ad4b5a089fde727164 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b64227aea59b245a65452eab5546deda = $(`<div id="html_b64227aea59b245a65452eab5546deda" style="width: 100.0%; height: 100.0%;">Wetzikon - Ochsen-Kreisel<br>MIV-Fahrten: 22,147</div>`)[0];
+                popup_38c93683449193ad4b5a089fde727164.setContent(html_b64227aea59b245a65452eab5546deda);
+            
+        
+
+        circle_marker_1bad178d4dc3a99b9691b5d127da0b1c.bindPopup(popup_38c93683449193ad4b5a089fde727164)
+        ;
+
+        
+    
+    
+            circle_marker_1bad178d4dc3a99b9691b5d127da0b1c.bindTooltip(
+                `<div>
+                     Wetzikon - Ochsen-Kreisel<br>MIV-Fahrten: 22,147
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        function geo_json_5bb07d330e30cf060bf59a7006cfbbad_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#2563eb", "fillColor": "#60a5fa", "fillOpacity": 0.15, "weight": 2};
+            }
+        }
+
+        function geo_json_5bb07d330e30cf060bf59a7006cfbbad_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5bb07d330e30cf060bf59a7006cfbbad = L.geoJson(null, {
+                onEachFeature: geo_json_5bb07d330e30cf060bf59a7006cfbbad_onEachFeature,
+            
+                style: geo_json_5bb07d330e30cf060bf59a7006cfbbad_styler,
+            ...{
+}
+        });
+
+        function geo_json_5bb07d330e30cf060bf59a7006cfbbad_add (data) {
+            geo_json_5bb07d330e30cf060bf59a7006cfbbad
+                .addData(data);
+        }
+            geo_json_5bb07d330e30cf060bf59a7006cfbbad_add({"features": [{"geometry": {"coordinates": [[[8.441956968494509, 47.39736739889361], [8.442151383033632, 47.396903373154146], [8.443616536906024, 47.397106342821274], [8.445322444186907, 47.39725469372039], [8.447685669318773, 47.397082656687914], [8.448217761857507, 47.39538591728814], [8.448489475823607, 47.39534847083493], [8.448325270682659, 47.39721243295372], [8.449129074453168, 47.39744529111826], [8.451715262598526, 47.39800328837515], [8.4532401374628, 47.39834653358588], [8.454725929360166, 47.398378930264755], [8.454656782386678, 47.398693252828224], [8.45145308363459, 47.39846334609936], [8.450279436066893, 47.39820726818718], [8.449166871740658, 47.39832015329006], [8.448621792309893, 47.400961399074134], [8.448174679657882, 47.40087588321444], [8.448301366499464, 47.39956911156193], [8.448216330654645, 47.39862957410077], [8.445696082592946, 47.39844768493856], [8.441956968494509, 47.39736739889361]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_5bb07d330e30cf060bf59a7006cfbbad.addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+            var circle_marker_d0e967fda17687cdf6d539fe32318b7c = L.circleMarker(
+                [47.39778194724213, 8.448436013673817],
+                {"bubblingMouseEvents": true, "color": "#1d4ed8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1d4ed8", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+        var popup_632ea714c5524a344e28b87dc220e347 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_016138afa26756658eda0b20cbc608da = $(`<div id="html_016138afa26756658eda0b20cbc608da" style="width: 100.0%; height: 100.0%;">Schlieren - Zentrumskreisel<br>MIV-Fahrten: 14,072</div>`)[0];
+                popup_632ea714c5524a344e28b87dc220e347.setContent(html_016138afa26756658eda0b20cbc608da);
+            
+        
+
+        circle_marker_d0e967fda17687cdf6d539fe32318b7c.bindPopup(popup_632ea714c5524a344e28b87dc220e347)
+        ;
+
+        
+    
+    
+            circle_marker_d0e967fda17687cdf6d539fe32318b7c.bindTooltip(
+                `<div>
+                     Schlieren - Zentrumskreisel<br>MIV-Fahrten: 14,072
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        function geo_json_1ccff99b8236248b7fdfafac5d19924d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#2563eb", "fillColor": "#60a5fa", "fillOpacity": 0.15, "weight": 2};
+            }
+        }
+
+        function geo_json_1ccff99b8236248b7fdfafac5d19924d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_1ccff99b8236248b7fdfafac5d19924d = L.geoJson(null, {
+                onEachFeature: geo_json_1ccff99b8236248b7fdfafac5d19924d_onEachFeature,
+            
+                style: geo_json_1ccff99b8236248b7fdfafac5d19924d_styler,
+            ...{
+}
+        });
+
+        function geo_json_1ccff99b8236248b7fdfafac5d19924d_add (data) {
+            geo_json_1ccff99b8236248b7fdfafac5d19924d
+                .addData(data);
+        }
+            geo_json_1ccff99b8236248b7fdfafac5d19924d_add({"features": [{"geometry": {"coordinates": [[[8.67594237434119, 47.38137092525062], [8.671851631322767, 47.38147154626125], [8.671510913811517, 47.380897427140695], [8.675965858349855, 47.38056828918094], [8.675866349679154, 47.377487875840075], [8.676416453635895, 47.376884802526135], [8.677639716174241, 47.375262777648885], [8.678909953360801, 47.37543918058239], [8.677704746084672, 47.37680383271696], [8.677370685210605, 47.37829361874486], [8.67725411704643, 47.38050831966473], [8.681622150834258, 47.37885996324282], [8.683172796876363, 47.37905358543463], [8.684219778116045, 47.37951254754756], [8.684319772208966, 47.37990311528347], [8.683774772855315, 47.38018919743908], [8.682577083054184, 47.379743951884905], [8.680645615984503, 47.379680200037484], [8.677307794977224, 47.38105806157904], [8.677424242472796, 47.38219468881576], [8.676553428610845, 47.3823979575198], [8.67594237434119, 47.38137092525062]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_1ccff99b8236248b7fdfafac5d19924d.addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+            var circle_marker_5ba9de76cba6c6c6ffad5da5f17616e4 = L.circleMarker(
+                [47.38093838252289, 8.676672199320302],
+                {"bubblingMouseEvents": true, "color": "#1d4ed8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1d4ed8", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+        var popup_67d94229d4617edc368c1ef7c8f1f201 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7bf519f5378ead43b1dc726845682cb7 = $(`<div id="html_7bf519f5378ead43b1dc726845682cb7" style="width: 100.0%; height: 100.0%;">Volketswil - Obi-Kreisel<br>MIV-Fahrten: 11,997</div>`)[0];
+                popup_67d94229d4617edc368c1ef7c8f1f201.setContent(html_7bf519f5378ead43b1dc726845682cb7);
+            
+        
+
+        circle_marker_5ba9de76cba6c6c6ffad5da5f17616e4.bindPopup(popup_67d94229d4617edc368c1ef7c8f1f201)
+        ;
+
+        
+    
+    
+            circle_marker_5ba9de76cba6c6c6ffad5da5f17616e4.bindTooltip(
+                `<div>
+                     Volketswil - Obi-Kreisel<br>MIV-Fahrten: 11,997
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        function geo_json_12daa04380cfbd47d752ce5bc7cf21c5_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#2563eb", "fillColor": "#60a5fa", "fillOpacity": 0.15, "weight": 2};
+            }
+        }
+
+        function geo_json_12daa04380cfbd47d752ce5bc7cf21c5_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_12daa04380cfbd47d752ce5bc7cf21c5 = L.geoJson(null, {
+                onEachFeature: geo_json_12daa04380cfbd47d752ce5bc7cf21c5_onEachFeature,
+            
+                style: geo_json_12daa04380cfbd47d752ce5bc7cf21c5_styler,
+            ...{
+}
+        });
+
+        function geo_json_12daa04380cfbd47d752ce5bc7cf21c5_add (data) {
+            geo_json_12daa04380cfbd47d752ce5bc7cf21c5
+                .addData(data);
+        }
+            geo_json_12daa04380cfbd47d752ce5bc7cf21c5_add({"features": [{"geometry": {"coordinates": [[[8.709429822219704, 47.34757000652618], [8.70976072022387, 47.34733118456526], [8.711216463468958, 47.348639264765524], [8.712739683774998, 47.34970189038697], [8.715234924147182, 47.34927584624995], [8.715503568283594, 47.34920510869827], [8.716059105489705, 47.34910939056246], [8.716281362190813, 47.348985151884165], [8.71664688245886, 47.34918893224844], [8.71656695787135, 47.34922525401666], [8.716263585331575, 47.349446427190315], [8.71335108179747, 47.35013120450951], [8.713533204558445, 47.35069900067822], [8.714034611040006, 47.35085041160505], [8.714201096533742, 47.351071473221396], [8.71433354742112, 47.35143850162629], [8.713759760310381, 47.351714441265216], [8.713310674093151, 47.35162032230332], [8.712781804022228, 47.350833254758584], [8.711668900296274, 47.35055210128505], [8.709593995044543, 47.35167670619268], [8.708943229307351, 47.352085647490185], [8.70833962050628, 47.35186839782057], [8.711253919245905, 47.349625562192415], [8.710031253811394, 47.348088677369674], [8.709429822219704, 47.34757000652618]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_12daa04380cfbd47d752ce5bc7cf21c5.addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+            var circle_marker_3c195e00e5389f11ddf3494a6a85fa8c = L.circleMarker(
+                [47.35006383445071, 8.712533370422738],
+                {"bubblingMouseEvents": true, "color": "#1d4ed8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1d4ed8", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+        var popup_e71bfd5ab4bbeb74e00172eac98f08f4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_def3d6b7cc164e289be18acd1149e670 = $(`<div id="html_def3d6b7cc164e289be18acd1149e670" style="width: 100.0%; height: 100.0%;">Uster - Nashornkreisel<br>MIV-Fahrten: 8,519</div>`)[0];
+                popup_e71bfd5ab4bbeb74e00172eac98f08f4.setContent(html_def3d6b7cc164e289be18acd1149e670);
+            
+        
+
+        circle_marker_3c195e00e5389f11ddf3494a6a85fa8c.bindPopup(popup_e71bfd5ab4bbeb74e00172eac98f08f4)
+        ;
+
+        
+    
+    
+            circle_marker_3c195e00e5389f11ddf3494a6a85fa8c.bindTooltip(
+                `<div>
+                     Uster - Nashornkreisel<br>MIV-Fahrten: 8,519
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        function geo_json_83a1ea547366b22d019fb84a44917fb4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#2563eb", "fillColor": "#60a5fa", "fillOpacity": 0.15, "weight": 2};
+            }
+        }
+
+        function geo_json_83a1ea547366b22d019fb84a44917fb4_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_83a1ea547366b22d019fb84a44917fb4 = L.geoJson(null, {
+                onEachFeature: geo_json_83a1ea547366b22d019fb84a44917fb4_onEachFeature,
+            
+                style: geo_json_83a1ea547366b22d019fb84a44917fb4_styler,
+            ...{
+}
+        });
+
+        function geo_json_83a1ea547366b22d019fb84a44917fb4_add (data) {
+            geo_json_83a1ea547366b22d019fb84a44917fb4
+                .addData(data);
+        }
+            geo_json_83a1ea547366b22d019fb84a44917fb4_add({"features": [{"geometry": {"coordinates": [[[8.419098712451927, 47.37413064034297], [8.419238649679926, 47.37017356473058], [8.423019533493715, 47.36884043230225], [8.427833339174839, 47.36725646878395], [8.428963706500724, 47.367692063493394], [8.427319165235104, 47.36986651336727], [8.42382107086513, 47.376795866774216], [8.419098712451927, 47.37413064034297]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_83a1ea547366b22d019fb84a44917fb4.addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+            var circle_marker_d5dc8747380c3ef3a3f92462718ec582 = L.circleMarker(
+                [47.37208509786546, 8.424988267205851],
+                {"bubblingMouseEvents": true, "color": "#1d4ed8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1d4ed8", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_871acf5d107b12ecd4caf9afb0bc094a);
+        
+    
+        var popup_61e72f752ab2509b1f620f983d1a87a1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a43294f4c6d6e4561b4e3ede201a56be = $(`<div id="html_a43294f4c6d6e4561b4e3ede201a56be" style="width: 100.0%; height: 100.0%;">Urdorf - Birmensdorferstrasse - Schützenstrasse<br>MIV-Fahrten: 3,922</div>`)[0];
+                popup_61e72f752ab2509b1f620f983d1a87a1.setContent(html_a43294f4c6d6e4561b4e3ede201a56be);
+            
+        
+
+        circle_marker_d5dc8747380c3ef3a3f92462718ec582.bindPopup(popup_61e72f752ab2509b1f620f983d1a87a1)
+        ;
+
+        
+    
+    
+            circle_marker_d5dc8747380c3ef3a3f92462718ec582.bindTooltip(
+                `<div>
+                     Urdorf - Birmensdorferstrasse - Schützenstrasse<br>MIV-Fahrten: 3,922
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
